@@ -4,7 +4,6 @@ pipeline{
     stage("snehal-build-docker-image"){
       steps{
         sh "echo build stage"
-        sh "docker build -t snehal-world ."
       }
     }
     stage("snehal-login-to-dockerhub"){
