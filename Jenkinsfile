@@ -4,7 +4,7 @@ pipeline{
     stage("snehal-build-docker-image"){
       steps{
         sh "echo build stage"
-        sh "docker version"
+        sh "docker --version"
       }
     }
     stage("snehal-login-to-dockerhub"){
