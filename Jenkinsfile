@@ -27,8 +27,8 @@ pipeline{
     stage("snehal-push-image-to-dockerhub"){
         steps{
             sh "echo push image stage"
-            sh 'docker tag pate1431/pythonimage pate1431/pythonimage:imagev1'
-            sh 'docker push pate1431/pythonimage:imagev1'
+            sh 'docker tag pate1431/pythonrepo pate1431/pythonimage'
+            sh 'docker push pate1431/pythonimage'
         }
     }
   }
