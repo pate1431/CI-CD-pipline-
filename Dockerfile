@@ -1,6 +1,5 @@
-FROM python:2.7-slim
-
-WORKDIR /DockerDir
-COPY . /DockerDir
+FROM python:3
+ADD main.py /
 EXPOSE 80
-CMD ["python", "main.py"]
+RUN pip install pystrich
+CMD ["python", "./main.py"]
