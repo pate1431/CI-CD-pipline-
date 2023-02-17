@@ -4,6 +4,8 @@ pipeline{
     stage("snehal-build-docker-image"){
       steps{
         sh "echo build stage"
+        sh "docker build -t python ."
+        sh "docker ps"
         
       }
     }
