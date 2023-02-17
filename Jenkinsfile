@@ -5,7 +5,7 @@ pipeline{
       steps{
         sh "echo build stage"
 
-        sh "docker build -t python ."
+        sh "docker images ls"
         sh "docker ps"
         
 
