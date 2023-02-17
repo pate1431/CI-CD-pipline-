@@ -4,7 +4,7 @@ pipeline{
     stage("snehal-build-docker-image"){
       steps{
         sh "echo build stage"
-        sh "docker build -t pythonRepo ."
+        sh "docker build -t pythonrepo ."
         sh "docker images ls"
         sh "docker ps"
         
