@@ -15,8 +15,9 @@ pipeline{
       steps{
         sh "echo build stage"
         script{
-          withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'jenkinspwd')]) {
-            sh 'docker login -u pate1431 -p ${jenkinspwd}'
+          withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+            sh 'docker login -u pate1431 -p ${dockerhubpwd}'  
+            }
           }
         }
       }
