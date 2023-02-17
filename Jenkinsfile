@@ -11,14 +11,18 @@ pipeline{
 
       }
     }
-    stage("snehal-login-to-dockerhub"){
-      steps{
+    stage("snehal-login-to-dockerhub")
+    {
+      steps
+      {
         sh "echo build stage"
-        script{
-          withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+        script
+        {
+          withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) 
+          {
             sh 'docker login -u pate1431 -p ${dockerhubpwd}'  
-            }
           }
+        
         }
       }
     }
